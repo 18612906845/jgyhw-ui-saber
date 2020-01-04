@@ -14,8 +14,10 @@
               key="1">
           <div>
             <img src="img/bg/img-logo.png"
-                 width="30"
-                 alt="">{{website.indexTitle}}</div>
+                 width="50"
+                 alt="">{{website.indexTitle}}
+            <!--<dev style="font-size: 15px;height: 52px;margin-left: 10px;">V1</dev>-->
+          </div>
         </span>
       </template>
     </transition-group>
@@ -66,14 +68,14 @@ export default {
     display: block;
     text-align: center;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 22px;
     div {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
       img {
-        margin-right: 5px;
+        margin-right: 10px;
       }
     }
   }

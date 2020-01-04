@@ -45,10 +45,10 @@ export default {
           name: "炫彩主题",
           value: "theme-star"
         },
-        {
+        /*{
           name: "iview主题",
           value: "theme-iview"
-        },
+        },*/
         {
           name: "d2主题",
           value: "theme-d2"
