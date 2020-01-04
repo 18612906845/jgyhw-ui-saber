@@ -4,6 +4,8 @@ import { isURL, validatenull } from '@/util/validate'
 import { deepClone } from '@/util/util'
 import webiste from '@/config/website'
 import { loginByUsername, getUserInfo, getMenu, getTopMenu, logout, refeshToken, getButtons } from '@/api/user'
+import { md5 } from '@/util/md5';
+import { sha1 } from '@/util/sha1';
 
 
 function addPath(ele, first) {
@@ -41,7 +43,8 @@ const user = {
         //根据用户名登录
         LoginByUsername({ commit }, userInfo) {
             return new Promise((resolve, reject) => {
-                loginByUsername(userInfo.tenantId, userInfo.username, userInfo.password, userInfo.type).then(res => {
+              let password = sha1(md5(userInfo.password));
+              loginByUsername(userInfo.tenantId, userInfo.username, password, userInfo.type).then(res => {
                     const data = res.data.data;
                     commit('SET_TOKEN', data.accessToken);
                     commit('SET_USERIFNO', data);

@@ -4,7 +4,7 @@ import {baseUrl} from '@/config/env';
 export const loginByUsername = (tenantId, account, password, type) => request({
   url: '/api/blade-auth/token',
   method: 'post',
-  params: {
+  data: {
     tenantId,
     account,
     password,
