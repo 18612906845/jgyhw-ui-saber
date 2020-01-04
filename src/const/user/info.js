@@ -22,12 +22,12 @@ export default {
         row: true,
         prop: 'avatar'
       }, {
-        label: '姓名',
+        label: '昵称',
         span: 12,
         row: true,
         prop: 'name'
       }, {
-        label: '用户名',
+        label: '姓名',
         span: 12,
         row: true,
         prop: 'realName'
